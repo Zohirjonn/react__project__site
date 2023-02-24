@@ -1,0 +1,23 @@
+.too{
+    display: inline-block;
+    width: 100%;
+    margin: 4rem auto;
+    text-align: center;
+    li{
+        display: inline;
+        text-align: center;
+        a{
+            text-decoration: none;
+            margin: 5px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 1rem 1.5rem ;
+            border-radius: 40px;
+            color: white;
+            transition: all 0.2s linear;
+            &:hover{
+                background-color: white;
+                color: black;
+            }
+        }
+    }
+}

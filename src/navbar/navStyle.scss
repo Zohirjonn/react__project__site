@@ -1,13 +1,20 @@
 .nav {
     display: flex;
+    // position: sticky;
+    // top: 0;
+    z-index: 2;
     width: 100%;
+    margin: auto;
     justify-content: space-between;
-    margin: 0;
+    // margin: 0;
+    // border-end-end-radius: 10px;
+    // border-end-start-radius: 10px;
     padding: 1rem;
     min-height: 5vh;
     background: rgb(52, 58, 241);
     background: radial-gradient(circle, rgb(1, 1, 20) 0%, rgb(15, 12, 28) 100%);
     opacity: 0.98 !important;
+    box-shadow: rgba(0, 200, 255, 0.25) 0px 25px 50px ;
 
     .nav__1{
         display: flex;
@@ -21,7 +28,7 @@
     }
 
     .nav__brand{
-        background-color: white;
+        background-color: rgba(0, 0, 5, 0.329);
         border-radius: 10px;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 5px inset, rgba(0, 0, 0, 0.3) 0px 0px 5px  inset;
         &:hover{
@@ -37,6 +44,7 @@
         }
         img{
             width: 50px;
+            border-radius: 50%;
         }     
     }
     // .nav__ijtimoiy{
@@ -65,7 +73,7 @@
             text-decoration: none ;
             font-size: 24px;
             color: rgb(255, 255, 255);
-            font-weight: 600;
+            font-weight: 200;
             span{
                 position: absolute;
                 width: 0%;
@@ -84,6 +92,40 @@
         }
     }
 }
+
+.dropdown{
+    position: relative;
+    display: inline-block !important;
+    // transition: all 7s linear;
+    &:hover{
+        .dropdown__content{
+            display: block;
+        }
+    }
+    .dropdown__content{
+        position: absolute;
+        list-style: none;
+        display: none;
+        min-width: max-content;
+        background-color: rgb(7, 9, 37);
+        padding: 1rem;
+        z-index: 1;
+        text-align: left;
+        a{
+            // color: white;
+            display: block;
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+            font-weight: 100;
+            &:hover{
+                color: rgb(255, 170, 0);
+            }
+        }
+    }
+}
+
+.ul{
+}
 // @media screen and (max-width:600px){
 //     .nav{
 //         .nav__header{
@@ -95,6 +137,18 @@
 
 
 //media
+
+@media screen and (max-width:1220px){
+    .nav{
+        .nav__ijtimoiy{
+            display: none;
+        }
+        .dropdown__content{
+            right: 0;
+            min-width: max-content;
+        }
+    }
+}
 
 @media screen and (max-width:1074px){
     .nav{
@@ -110,24 +164,45 @@
         }
     }
 }
-@media screen and (max-width:722px){
+@media screen and (max-width:815px){
     .nav{
         .nav__brand{
             a{
-                display: block;
+                h1{
+                    font-size: 20px;
+                }
+                // display: block;
                 font-size: 20px !important;
             }
         }
         .nav__header{
-            font-size: 20px !important;
+            a{
+
+                font-size: 20px !important;
+            }
         }
     }
 }
-@media screen and (max-width:664px){
+@media screen and (max-width:760px){
     .nav{
         .nav__header{
             gap: 0.5rem;
             a{
+                font-size: 18px !important;
+            }
+        }
+    }
+}
+@media screen and (max-width:620px){
+    .nav{
+        .nav__brand{
+            a{
+                img{
+                    width: 40px;
+                }
+                h1{
+                    font-size: 20px;
+                }
                 font-size: 18px !important;
             }
         }

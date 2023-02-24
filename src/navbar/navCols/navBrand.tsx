@@ -7,7 +7,6 @@ export default function NavBrand(){
         <div className="nav__brand nav__1">
             <Link to="/">
              <img src={logoImage} alt="Z"/>
-             <h1>Zohirjon</h1>
             </Link>
             <Outlet/>
         </div>
