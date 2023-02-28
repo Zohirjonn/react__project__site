@@ -1,8 +1,6 @@
 import React from 'react'
 import {Link,NavLink,Outlet} from 'react-router-dom'
 
-
-
 export default function NavHeader(){
     return(
         <div className="nav__header nav__1">
@@ -12,7 +10,7 @@ export default function NavHeader(){
             <Link to="/malumot" className='dropdown'>Malumot<span></span>
                 <ul className='dropdown__content'>
                     <NavLink to="/malumot/aloqa">Men bilan aloqa</NavLink>
-                    <NavLink to="/malumot/ham">Ochiq malumotlar</NavLink>
+                    <NavLink to="/malumot/hamjamiyat">Ochiq malumotlar</NavLink>
                     <NavLink to="/malumot/sertifikat">Sertifikatlar</NavLink>
                     <NavLink to="/malumot/tajriba">Tajriba</NavLink>
                 </ul>
